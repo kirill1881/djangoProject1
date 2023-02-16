@@ -3,7 +3,9 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 def index(request):
-    return render(request, 'index.html', {'title':'главная'})
+    return render(request, 'index.html')
+def add_task(request):
+    return render(request, 'addTask.html')
 
-def about(request):
-    return render(request, 'about.html')
+def edit_task(request):
+    return render(request, 'editTask.html')
