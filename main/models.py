@@ -2,10 +2,7 @@ from django.db import models
 
 
 class Task(models.Model):
-    def __init__(self, name, text, time, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.__name = name
-        self.__text = text
-        self.__time = time
-
+    name = models.CharField(name='task_name', max_length=255)
+    text = models.CharField(name='text', max_length=255)
+    time = models.IntegerField(name='time', max_length=255)
 
